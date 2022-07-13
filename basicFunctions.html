@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+        function add7(x) {
+            let num = x + 7;
+            return num 
+        }
+        console.log(add7(5))
+
+
+        function multiply(a,b) {
+            return a * b;
+        }
+        console.log(multiply(2,3))
+
+        let capitalise = (word) => {
+            word = word.toLowerCase();
+            return word.charAt(0).toUpperCase() + word.slice(1)
+        }
+        console.log(capitalise('MaTTHew'))
+
+        let splicer = (word) => {
+            return word.slice(-1)
+        }
+        console.log(splicer('Matthew'))
+
+        let answer = parseInt(prompt("How high are we going?: ")); 
+    </script>
+</body>
+</html>

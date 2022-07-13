@@ -1,0 +1,1 @@
+let answer = parseInt(prompt("How high are we going?: ")); 
