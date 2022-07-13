@@ -7,20 +7,69 @@
     <title>Document</title>
 </head>
 <body>
+    @type {HTMLDivElement} */        
+    let b =  document.querySelector('.body');
     <script>
+        let computerSelection;
+        let playerSelection;
+
         function computerPlay() {
             const rndInt = Math.floor(Math.random() * 3) + 1
             if (rndInt == 1){
-                return 'Rock';
+                computerSelection = 'rock';
+                return computerSelection;
             }
             else if (rndInt == 2){
-                return 'Paper';
+                computerSelection = 'paper';
+                return computerSelection;
             }
             else if (rndInt == 3){
-                return 'Scissors';
+                computerSelection = 'scissors';
+                return computerSelection;
             }
         }
-        console.log(computerPlay())
+        
+
+        function playerPlay() {
+           playerSelection = prompt("Choose either rock, paper or scissors: ")
+        }
+        playerPlay()
+        computerPlay()
+
+        playerSelection = playerSelection.toLowerCase()
+        console.log("Your Selection: " + playerSelection)
+        console.log("Computer Selection: " + computerSelection)
+
+        if (playerSelection == 'rock' && computerSelection == 'paper'){
+            console.log("You Lose! " +  computerSelection + " beats " + playerSelection)
+        }
+        else if (playerSelection == 'rock' && computerSelection == 'scissors'){
+            console.log("You Win! " +  playerSelection + " beats " + computerSelection)
+        }
+        else if (playerSelection == 'rock' && computerSelection == 'rock'){
+            console.log("Draw play again!")
+        }
+
+        if (playerSelection == 'paper' && computerSelection == 'scissors'){
+            console.log("You Lose! " +  computerSelection + " beats " + playerSelection)
+        }
+        else if (playerSelection == 'paper' && computerSelection == 'rock'){
+            console.log("You Win! " +  playerSelection + " beats " + computerSelection)
+        }
+        else if (playerSelection == 'paper' && computerSelection == 'paper'){
+            console.log("Draw play again!")
+        }
+
+        if (playerSelection == 'scissors' && computerSelection == 'rock'){
+            console.log("You Lose! " +  computerSelection + " beats " + playerSelection)
+        }
+        else if (playerSelection == 'scissors' && computerSelection == 'paper'){
+            console.log("You Win! " +  playerSelection + " beats " + computerSelection)
+        }
+        else if (playerSelection == 'scissors' && computerSelection == 'scissors'){
+            console.log("Draw play again!")
+        }
+
     </script>
 </body>
 </html>
